@@ -7,12 +7,13 @@ using TMPro;
 public class Game_Controller : MonoBehaviour
 {
     public GameObject[] allMining_area;
-    //public TextMeshProUGUI Team1_Score, Team2_Score, Team3_Score, Team4_Score, Win_Text; //UI顯示分數 & 勝利文字
-    //public Image Team1_Scorebar, Team2_Scorebar, Team3_Scorebar, Team4_Scorebar;
     int occupyNum_team1 = 0, occupyNum_team2 = 0, occupyNum_team3 = 0, occupyNum_team4 = 0; //佔領的領地數
     public float team1 = 0, team2 = 0, team3 = 0, team4 = 0; //總分
     float score_Calculate_Timer = 0;
-    internal float winScore = 3000; //勝利目標分
+    internal float winScore = 3000; //勝利目標分 3000
+
+    public Winner_UI winner_UI;
+    bool isSomeoneWin; //有人贏了
     void Start()
     {
         allMining_area = GameObject.FindGameObjectsWithTag("Mining_area"); // 將所有礦區加入陣列
@@ -64,11 +65,30 @@ public class Game_Controller : MonoBehaviour
             score_Calculate_Timer = 0; //計時歸零
         }
         score_Calculate_Timer += Time.deltaTime;
+        Is_Victory();//判定是否有人贏
     }
 
     private void Is_Victory() //勝利判定
     {
+        if (winner_UI == null)
+        {
+            Debug.Log("winner_UI 為 null");
+            return;
+        }
 
+        if (!isSomeoneWin) //當目前沒人贏
+        {
+            float[] teamScores = { team1, team2, team3, team4 };
+            for (int i = 0; i < teamScores.Length; i++)
+            {
+                if (teamScores[i] > winScore)
+                {
+                    winner_UI.Winner(i + 1);
+                    isSomeoneWin = true;
+                    break;
+                }
+            }
+        }
     }
 
     public enum Team

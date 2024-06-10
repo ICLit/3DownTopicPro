@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player_Data:
     team: 4
-    equipment: 2
-    props: 1
+    equipment: 3
+    props: 3

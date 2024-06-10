@@ -12,6 +12,7 @@ public class Player_Controller : MonoBehaviour
     public Props_Controller _props_Controller;
     public GameObject drill_Object; //鑽頭觸發物件
     public GameObject nowShield_Object;
+    public Player_Animator_Controller animatorCtrl;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -51,6 +52,11 @@ public class Player_Controller : MonoBehaviour
         if (!(Input.GetKey(InputKey[1]) || Input.GetKey(InputKey[2]) || Input.GetKey(InputKey[3]) || Input.GetKey(InputKey[4])))
         {
             rb.velocity = new Vector3(0, 0, 0);
+            animatorCtrl.Set_isRun(false);
+        }
+        else
+        {
+            animatorCtrl.Set_isRun(true);
         }
     }
 
@@ -66,10 +72,14 @@ public class Player_Controller : MonoBehaviour
             case Equipment.pile_driver://打樁機
                 Debug.Log(_player._equipment + "打樁機");
                 _pile_driver.Attack(player, _player._myTeam.GetHashCode()); //將玩家&玩家隊伍列舉的值傳給Pile_driver
+                if (!_player.isOverheat)
+                    animatorCtrl.Set_Pd_Attack(); //播放打樁機攻擊動畫
                 break;
             case Equipment.demolition_hamer://鑿破機
                 Debug.Log(_player._equipment + "鑿破機");
                 _demolition_hammer.Attack(player, _player._myTeam.GetHashCode());
+                if (!_player.isOverheat)
+                    animatorCtrl.Set_Dh_Attack(); //播放鑿破機攻擊動畫
                 break;
             default://以上都不符合走這個
                 Debug.Log("你沒拿裝備");

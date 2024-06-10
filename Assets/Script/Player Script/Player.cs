@@ -32,6 +32,8 @@ public class Player : MonoBehaviour
     {
         if (!isDizzy)
             player_Controller.PlayerMove(this.gameObject, InputKey); //ª±®a²¾°Ê
+        else
+            player_Controller.animatorCtrl.Set_isRun(false);
     }
     private void Update()
     {

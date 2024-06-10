@@ -266,6 +266,7 @@ GameObject:
   - component: {fileID: 3073393247276657496}
   - component: {fileID: 3073393247276657499}
   - component: {fileID: 3073393247276657498}
+  - component: {fileID: 2494564291298320162}
   - component: {fileID: 3073393247276657495}
   - component: {fileID: 529565770}
   - component: {fileID: 947062790616249493}
@@ -378,6 +379,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!114 &2494564291298320162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3073393247276657501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f23b4802f52ce49a422ef5ef4b5478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!114 &3073393247276657495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,6 +411,7 @@ MonoBehaviour:
   _props_Controller: {fileID: -2232273506243861191}
   drill_Object: {fileID: 1969126845307570003}
   nowShield_Object: {fileID: 0}
+  animator: {fileID: 2494564291298320162}
 --- !u!114 &529565770
 MonoBehaviour:
   m_ObjectHideFlags: 0
