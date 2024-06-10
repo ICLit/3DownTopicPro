@@ -103,6 +103,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3073393247276657501, guid: 4fbd20dc620f26c4287f3db38545f7f1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fbd20dc620f26c4287f3db38545f7f1, type: 3}
 --- !u!4 &3970266255257435802 stripped
@@ -131,18 +135,6 @@ PrefabInstance:
     - target: {fileID: 7428200417270445214, guid: 6a26d68c01f8c094eb07d07c0114a911, type: 3}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7428200417270445214, guid: 6a26d68c01f8c094eb07d07c0114a911, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7428200417270445214, guid: 6a26d68c01f8c094eb07d07c0114a911, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7428200417270445214, guid: 6a26d68c01f8c094eb07d07c0114a911, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7428200417270445214, guid: 6a26d68c01f8c094eb07d07c0114a911, type: 3}
       propertyPath: m_LocalPosition.x
