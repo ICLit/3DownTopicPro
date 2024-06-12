@@ -156,7 +156,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c7e9437f1d2168143950c2cdc79413e1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -274,6 +274,7 @@ GameObject:
   - component: {fileID: 1755144545180535063}
   - component: {fileID: -2232273506243861191}
   - component: {fileID: 5450765271845131636}
+  - component: {fileID: 342659900525615231}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -411,7 +412,7 @@ MonoBehaviour:
   _props_Controller: {fileID: -2232273506243861191}
   drill_Object: {fileID: 1969126845307570003}
   nowShield_Object: {fileID: 0}
-  animator: {fileID: 2494564291298320162}
+  animatorCtrl: {fileID: 2494564291298320162}
 --- !u!114 &529565770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,8 +425,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fe9370eaeb7f6641bd753c3a4db6925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _myTeam: 0
-  _equipment: 0
+  _myTeam: 2
+  _equipment: 3
   _props: 0
   speed: 5
   overheat_value: 0
@@ -435,12 +436,12 @@ MonoBehaviour:
   player_Controller: {fileID: 3073393247276657495}
   player_Location: {fileID: 8287439909437042132}
   InputKey:
-  - e
-  - w
-  - a
-  - s
-  - d
-  - q
+  - i
+  - u
+  - h
+  - j
+  - k
+  - y
 --- !u!114 &947062790616249493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,6 +513,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4094f324c8872504c8935bd20b02a228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &342659900525615231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3073393247276657501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1486bc3307bded749aa97addd18b8fc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  equimentPrefab:
+  - {fileID: 8108089686981211400, guid: f7a2c7ac7436a3b48921958a057ee9d4, type: 3}
+  - {fileID: 686224200050872316, guid: 26d7c16f6895964439f01fd48ce568be, type: 3}
+  - {fileID: 877516590585379530, guid: 228efd76bb1b10c499709a9004048099, type: 3}
+  player: {fileID: 529565770}
+  handheld_Transform: {fileID: 0}
 --- !u!1 &5500789857237686330
 GameObject:
   m_ObjectHideFlags: 0

@@ -35,6 +35,10 @@ PrefabInstance:
       propertyPath: InputKey.Array.data[5]
       value: '[4]'
       objectReference: {fileID: 0}
+    - target: {fileID: 342659900525615231, guid: 4fbd20dc620f26c4287f3db38545f7f1, type: 3}
+      propertyPath: handheld_Transform
+      value: 
+      objectReference: {fileID: 4374853707627870281}
     - target: {fileID: 2494564291298320162, guid: 4fbd20dc620f26c4287f3db38545f7f1, type: 3}
       propertyPath: animator
       value: 
@@ -174,6 +178,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7eb76afa8f40934ba16fb2d4c718033, type: 3}
+--- !u!1 &4374853707627870281 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5855782868132473109, guid: b7eb76afa8f40934ba16fb2d4c718033, type: 3}
+  m_PrefabInstance: {fileID: 7923363617304416604}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &7923363616897275612 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 952469376, guid: b7eb76afa8f40934ba16fb2d4c718033, type: 3}
