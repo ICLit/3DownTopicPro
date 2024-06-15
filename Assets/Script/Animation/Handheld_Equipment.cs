@@ -13,23 +13,24 @@ public class Handheld_Equipment : MonoBehaviour
 
     void Start()
     {
-        
+        //EquipmentJudge();
     }
 
-    // Update is called once per frame
     public void Handheld(int equimentNum)
     {
         GameObject equiment = Instantiate(equimentPrefab[equimentNum - 1]);
         ParentConstraint parentConstraint = equiment.GetComponent<ParentConstraint>();
 
         //將Gameobject轉化為ConstraintSource單位
-        ConstraintSource constraintSource = new ConstraintSource 
+        ConstraintSource constraintSource = new ConstraintSource
         {
             sourceTransform = equimentPrefab[equimentNum - 1].transform,
             weight = 1.0f
         };
 
         parentConstraint.AddSource(constraintSource);
+
+        parentConstraint.constraintActive = true;
     }
 
     public void EquipmentJudge() //判斷武器

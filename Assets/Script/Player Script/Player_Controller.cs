@@ -16,6 +16,7 @@ public class Player_Controller : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        GetComponent<Handheld_Equipment>().EquipmentJudge();
     }
 
     private void Update()
