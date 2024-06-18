@@ -25,5 +25,11 @@ public class Attack_point_Controllor : MonoBehaviour
             Box box = other.GetComponent<Box>();
             box.DestroyThisBox();
         }
+
+        /*if (other.CompareTag("Item")) //如果碰到掉落物
+        {
+            Props props = other.GetComponent<Props>();
+            Destroy(props.gameObject);
+        }*/
     }
 }

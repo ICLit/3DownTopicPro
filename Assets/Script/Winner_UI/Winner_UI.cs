@@ -10,9 +10,12 @@ public class Winner_UI : MonoBehaviour
     public Image playerImageSet, Bg; //UI放圖的地方 & 背景
 
     public TextMeshProUGUI winnerText1, winnerText2;
+    public TextMeshProUGUI winnerText3;
     public List<Sprite> playerImageList; //玩家角色圖片
     public List<Color> playerColor;
     public List<Material> WinnerTextMtrl;
+
+    public string[] WinnerPlayerSay;
 
     void Start()
     {
@@ -40,5 +43,6 @@ public class Winner_UI : MonoBehaviour
         winnerText2.GetComponent<TextMeshProUGUI>().fontMaterial = WinnerTextMtrl[playerIndex - 1];
         Bg.color = playerColor[playerIndex - 1];
         playerImageSet.sprite = playerImageList[playerIndex - 1];
+        winnerText3.text = WinnerPlayerSay[playerIndex - 1];
     }
 }

@@ -9,6 +9,7 @@ public class Game_Controller : MonoBehaviour
     public GameObject[] allMining_area;
     int occupyNum_team1 = 0, occupyNum_team2 = 0, occupyNum_team3 = 0, occupyNum_team4 = 0; //佔領的領地數
     public float team1 = 0, team2 = 0, team3 = 0, team4 = 0; //總分
+    //Player player1, player2, player3, player4; //玩家是否存活
     float score_Calculate_Timer = 0;
     internal float winScore = 3000; //勝利目標分 3000
 
