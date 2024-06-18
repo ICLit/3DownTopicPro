@@ -24,7 +24,8 @@ public class Handheld_Equipment : MonoBehaviour
         //將Gameobject轉化為ConstraintSource單位
         ConstraintSource constraintSource = new ConstraintSource
         {
-            sourceTransform = equimentPrefab[equimentNum - 1].transform,
+            //sourceTransform = equimentPrefab[equimentNum - 1].transform,
+            sourceTransform = handheld_Transform.transform,
             weight = 1.0f
         };
 

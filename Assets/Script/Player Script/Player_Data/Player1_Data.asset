@@ -15,4 +15,4 @@ MonoBehaviour:
   Player_Data:
     team: 1
     equipment: 2
-    props: 3
+    props: 1
