@@ -69,6 +69,7 @@ public class Player_Controller : MonoBehaviour
             case Equipment.drill://鑽頭
                 Debug.Log(_player._equipment + "鑽頭");
                 _drill.Attack();
+
                 break;
             case Equipment.pile_driver://打樁機
                 Debug.Log(_player._equipment + "打樁機");
@@ -132,6 +133,7 @@ public class Player_Controller : MonoBehaviour
     {
         if (player._equipment == Player_Controller.Equipment.drill) //當玩家的裝備為鑽頭時
         {
+            animatorCtrl.Set_IsDrill(true);
             if (!(drill_Object.activeInHierarchy)) //當鑽頭Object未啟用時
             {
                 drill_Object.SetActive(true); //將其啟用
@@ -140,6 +142,7 @@ public class Player_Controller : MonoBehaviour
         }
         else //當玩家的裝備不是鑽頭時
         {
+            animatorCtrl.Set_IsDrill(false);
             if (drill_Object.activeInHierarchy) //且鑽頭Object已啟用
                 drill_Object.SetActive(false); //將其關閉
         }

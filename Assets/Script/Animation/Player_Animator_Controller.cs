@@ -18,4 +18,12 @@ public class Player_Animator_Controller : MonoBehaviour
     {
         animator.SetTrigger("Dh_Attack");
     }
+    public void Set_IsDrill(bool TorF)
+    {
+        animator.SetBool("isDrill", TorF);
+    }
+    public void Set_Drill_Attack(bool TorF)
+    {
+        animator.SetBool("Drill_Attack", TorF);
+    }
 }

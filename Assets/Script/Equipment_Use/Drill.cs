@@ -50,6 +50,9 @@ public class Drill : MonoBehaviour
     {
         is_Drill_attack = true;
         player.speed += 3;
+
+        if (!player.isOverheat)
+            player.player_Controller.animatorCtrl.Set_Drill_Attack(true); //播放打樁機攻擊動畫
     }
     void CloseDrillAttack()
     {
@@ -58,5 +61,8 @@ public class Drill : MonoBehaviour
             is_Drill_attack = false;
             player.speed -= 3;
         }
+
+        //if (!player.isOverheat)
+        player.player_Controller.animatorCtrl.Set_Drill_Attack(false); //播放打樁機攻擊動畫
     }
 }
